@@ -1,0 +1,227 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #fff;
+  color: #222;
+  line-height: 1.6;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+#handshake-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease;
+}
+
+.handshake-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#handshake-video {
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: contain;
+}
+
+
+
+/* General styling for the overlay background */
+#handshake-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  z-index: -1;
+}
+
+/* Add a subtle shadow to the logos */
+.handshake-logo, .handshake-gif {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+/* Add a pulsing effect to the handshake gif */
+.handshake-gif {
+  animation: handshakePulse 2s infinite ease-in-out;
+}
+
+@keyframes handshakePulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 100%;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-left {
+  margin-right: auto;
+}
+
+.logo-right {
+  margin-left: auto;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('hero-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+  min-height: 70vh; /* Changed to 70% of viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+.cta-button {
+  padding: 10px 30px;
+  background: #0066cc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* About */
+.about {
+  padding: 60px 20px;
+  background: #fafafa;
+}
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.about-block {
+  flex: 1 1 400px;
+  background: white;
+  padding: 20px;
+  border-left: 4px solid #0066cc;
+}
+
+/* Courses */
+.courses {
+  padding: 60px 20px;
+}
+.course-category {
+  margin-bottom: 2rem;
+}
+.course-category h3 {
+  color: #0066cc;
+  margin-bottom: 0.5rem;
+}
+.course-category ul {
+  padding-left: 1.2rem;
+}
+.course-category ul li {
+  margin-bottom: 5px;
+}
+
+/* Footer */
+.footer {
+  background: #222;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+.footer-logo {
+  height: 40px;
+  margin: 0 10px;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards;
+}
+.delay-1 {
+  animation-delay: 0.3s;
+}
+.delay-2 {
+  animation-delay: 0.6s;
+}
+.delay-3 {
+  animation-delay: 0.9s;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CINEC x ARU Collaboration</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Handshake Animation Overlay -->
+<div id="handshake-overlay">
+  <div class="handshake-animation">
+    <video id="handshake-video" autoplay muted>
+      <source src="handshake.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+        <img src="cinec-logo.png" alt="CINEC Logo" class="logo logo-left"/>
+        <img src="aru-logo.png" alt="ARU Logo" class="logo logo-right"/>
+    </div>
+</header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1 data-aos="fade-up">Joining hands to offer world-class education with global recognition.</h1>
+      <p data-aos="fade-up" data-aos-delay="200">Empowering your future through globally accredited degree programs.</p>
+      <a href="#courses" class="cta-button" data-aos="fade-up" data-aos-delay="400">Explore Programs</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="about-container">
+      <div class="about-block" data-aos="fade-right">
+        <h2>About CINEC</h2>
+        <p>With over 35 years of excellence in maritime and higher education, CINEC is a four-time Presidential Award-winning institution delivering world-class education in Sri Lanka.</p>
+      </div>
+      <div class="about-block" data-aos="fade-left" data-aos-delay="200">
+        <h2>About ARU</h2>
+        <p>Anglia Ruskin University is a UK-based university awarded “University of the Year 2023” by Times Higher Education, known for innovation, inclusion, and academic excellence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses" class="courses">
+    <h2 data-aos="fade-up">Our Programs</h2>
+
+    <div class="course-category" data-aos="fade-up" data-aos-delay="200">
+      <h3>Engineering</h3>
+      <ul>
+        <li>BEng (Hons) Civil Engineering</li>
+        <li>BEng (Hons) Automotive Engineering</li>
+        <li>BEng (Hons) Electronic and Electrical Engineering</li>
+        <li>BEng (Hons) Mechanical Engineering</li>
+        <li>BEng (Hons) Mechatronics and Robotics Engineering</li>
+        <li>MSc Automotive Engineering</li>
+        <li>MSc Construction Project Management</li>
+        <li>MSc Automation and Robotics</li>
+        <li>MSc Electronic and Electrical Engineering</li>
+        <li>MSc Mechanical Engineering</li>
+      </ul>
+    </div>
+
+    <div class="course-category" data-aos="fade-up" data-aos-delay="300">
+      <h3>Computing</h3>
+      <ul>
+        <li>BSc (Hons) Computer Science</li>
+        <li>BSc (Hons) Software Engineering</li>
+        <li>BSc (Hons) Artificial Intelligence</li>
+        <li>BSc (Hons) Applied Computer Science (Top-Up)</li>
+        <li>MSc Artificial Intelligence</li>
+      </ul>
+    </div>
+
+    <div class="course-category" data-aos="fade-up" data-aos-delay="400">
+      <h3>Nursing</h3>
+      <ul>
+        <li>BSc (Hons) International Nursing Studies (Top-Up)</li>
+        <li>MSc Clinical Nursing</li>
+        <li>MSc Mental Health</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <img src="cinec-logo.png" class="footer-logo" />
+      <img src="aru-logo.png" class="footer-logo" />
+      <p>&copy; 2025 CINEC Campus & Anglia Ruskin University. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    window.addEventListener("load", () => {
+      const overlay = document.getElementById("handshake-overlay");
+      setTimeout(() => {
+        overlay.style.opacity = 0;
+        setTimeout(() => overlay.style.display = "none", 1000);
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
